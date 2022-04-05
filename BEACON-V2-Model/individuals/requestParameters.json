@@ -1,10 +1,61 @@
 {
   "$schema": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/requestParameters.json",
-  "individual": {
-    "type": "object",
-    "properties": {
-      "id": {
+  "GETParameters": {
+    "individual.ids": {
+      "type": "array",
+      "collectionFormat": "csv",
+      "items":{
         "type": "string"
+      }
+    },
+    "individual.sex.ids": {
+      "type": "array",
+      "collectrionFormat": "csv",
+      "items": {
+        "type": "string"
+      }
+    },
+    "individual.sex.labels": {
+      "type": "array",
+      "collectrionFormat": "csv",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "POSTParameters":{
+    "individual": {
+      "type": "object",
+      "properties": {
+        "ids": {
+          "type": "array",
+          "items":
+          {"type": "string"}
+        },
+        "sex":{
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id":{
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "karyotypicSex":{},
+        "ethnicity": {},
+        "geographicOrigin":{},
+        "diseases":{},
+        "pedigrees":{},
+        "phenotypicFeatures":{},
+        "treatments":{},
+        "interventionsOrProcedures":{},
+        "measures":{},
+        "exposures":{}
       }
     }
   }
